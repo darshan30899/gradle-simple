@@ -14,7 +14,7 @@ steps:
 - task: Gradle@2
   inputs:
     gradleWrapperFile: $(gradle-build)
-    tasks: 'build'
+    tasks: $(build-task)
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
