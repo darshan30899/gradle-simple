@@ -19,6 +19,15 @@ parameters:
       - DEA1
       - DEA2
 
+  - name: environment
+    type: string
+    default: "dev"
+    displayName: Select environment
+    values: 
+      - prod
+      - test
+      - dev
+
 
 pool:
   name: linux-agent
