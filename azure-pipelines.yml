@@ -3,31 +3,8 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-trigger: none
-parameters:
-  - name: region
-    type: string
-    default: "USR2"
-    displayName: Select Region
-    values: 
-      - USR1
-      - USR2
-      - UKR1
-      - UKR2
-      - AUA1
-      - AUA2
-      - DEA1
-      - DEA2
-
-  - name: environment
-    type: string
-    default: "dev"
-    displayName: Select environment
-    values: 
-      - prod
-      - test
-      - dev
-
+trigger:
+   - master
 
 pool:
   name: linux-agent
